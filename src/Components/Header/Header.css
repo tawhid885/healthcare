@@ -2,7 +2,7 @@
 .header-container{
     padding-left: 50px;
     padding-right: 50px;
-     background-color: blue;
+    background-color: blue;
 }
 
 
@@ -74,4 +74,13 @@ ul li a.signup:hover{
 
 .logout:hover{
     color: white;
+}
+
+@media only screen and (max-width: 412px){
+    .nav-section{
+        border: 2px solid red;
+        display: none;
+        flex-direction: column;
+        /* height: 500px; */
+    }
 }

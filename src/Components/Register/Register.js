@@ -1,41 +1,46 @@
-import React from 'react';
+import React, {useState} from 'react';
 import "./Register.css";
 import logo from "./../../img/logo2.jpg";
-import { useForm } from "react-hook-form";
 import {NavLink, useNavigate} from "react-router-dom";
 import useAuth from "./../../Hooks/useAuth";
 
 
 
 const Register = () => {
+    const [cp, setCP] = useState("");
     const navigate = useNavigate();
 
 
-    const {setName, setEmail, setPassword, error, setError, createNewUser, updateProfileInfo, name} = useAuth();
+    const {password, setName, setEmail, setPassword, error, setError, createNewUser, updateProfileInfo} = useAuth();
+
+    const handleName=(e)=>{
+        setName(e.target.value);
+    }
+
+    const handleEmail=(e)=>{
+        setEmail(e.target.value);
+    }
+
+    const handlePassword=(e)=>{
+        setPassword(e.target.value);
+    }
+
+    const handleConfirmPassword=(e)=>{
+        setCP(e.target.value);
+    }
 
 
-    const { register, handleSubmit,reset, formState: { errors } } = useForm();
-
-    
-    // const onSubmit=(data)=>{
-    //     console.log(data);
-    // }
-
-    const onSubmit = ({displayName, email, password, confirm_password}) => {
-        console.log("triggered!")
-        console.log(displayName, email)
-        console.log(typeof setName)
-        setEmail(email);
-        setPassword(password);
-        if(password !== confirm_password){
-            setError("password must be same")
+    const onSubmit = (e) => {
+        e.preventDefault();
+        console.log("triggered!");
+        if(password !== cp){
+            setError("password must be same");
+            return;
         }
         else{
             createNewUser()
             .then(result=>{
                 console.log("user created, ", result.user);
-                setName(displayName);
-                console.log(name);
                 updateProfileInfo();
                 navigate("/login");
             })
@@ -43,12 +48,6 @@ const Register = () => {
                 console.log(error.message);
                 setError(error.message);
             })
-            reset();
-            console.log("after reset");
-            console.log("-------------------");
-            console.log(displayName);
-            console.log(email);
-            console.log(password);
         }
 
     };
@@ -61,17 +60,16 @@ const Register = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="field-container">
-                    <form className="my-form" onSubmit={handleSubmit(onSubmit)}>
-                        <input className="form-field" placeholder="Name" {...register("displayName")} />
+                    <form className="my-form" onSubmit={onSubmit}>
+                        
+                        <input type="text" placeholder='Name' className='form-field' onBlur={handleName}/>
 
-                        <input className="form-field" type="email" placeholder='Email'{...register("email", { required: true })} />
+                        <input type="email" placeholder='email' className='form-field' onBlur={handleEmail}/>
 
-                        <input className="form-field" type="password" placeholder='Password'{...register("password", { required: true })} />
+                        <input type="password" placeholder='Password' className='form-field' onBlur={handlePassword}/>
 
-                        <input className="form-field"
-                        type="password" placeholder='Confirm Password'{...register("confirm_password", { required: true })} />
+                        <input type="password" placeholder="Confirm password" className='form-field' onBlur={handleConfirmPassword}/>
     
-                        {(errors.email || errors.password || errors.confirm_password) && <span className='error-class'>This field is required</span>}
                         {<span className='error-class'>{error}</span>}
 
                         <input type="submit" value="Signup" className='btn my-btn' />

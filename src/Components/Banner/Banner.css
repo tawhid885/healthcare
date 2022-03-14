@@ -41,3 +41,9 @@
     cursor: pointer;
     padding: 10px;
 }
+
+@media only screen and (max-width: 412px){
+    .banner-container{
+        display: none;
+    }
+}

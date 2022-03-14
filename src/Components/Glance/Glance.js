@@ -11,6 +11,7 @@ const Glance = () => {
                 <p>
                 A part of the U.S. Department of Health and Human Services, NIH is the largest biomedical research agency in the world.
                 </p>
+                <div className="row">
                 <div className="g-full">
                     <div className="g-image">
                         <img src={g1} alt="" />
@@ -34,6 +35,7 @@ const Glance = () => {
                     <div className="g-detail">
                         <h5>Headquarters: Dhaka, Bangladesh</h5>
                     </div>
+                </div>
                 </div>
             </div>
     );

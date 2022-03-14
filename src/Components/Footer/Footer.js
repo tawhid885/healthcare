@@ -12,26 +12,26 @@ const Footer = () => {
                 </div>
                 <div className='main-li-container'>
                     <div>
-                        <li>About online food</li>
+                        <li>About YouHeal</li>
                         <li>Read our blog</li>
-                        <li>Sign up to deliver</li>
-                        <li>Add your restaurant</li>
+                        <li>Sign up to get news</li>
+                        <li>Add your comments</li>
                     </div>
                     <div>
                         <li>Get help</li>
                         <li>Read FAQs</li>
                         <li>View all cities</li>
-                        <li>Restaurant near me</li>
+                        <li>Near me</li>
                     </div>
                 </div>
             </div>
             {/* another part  */}
             <div className='second-part'>
-                <div><small>Copyright &#169; 2022 onion food</small></div>
+                <div><small>Copyright &#169; 2022 YouHeal healthcare limited</small></div>
                 <div className='terms'>
                     <li>Privacy Policy</li>
                     <li>Terms of Use</li>
-                    <li>Pricing</li>
+                    <li>Cost</li>
                 </div>
             </div>
         </div>

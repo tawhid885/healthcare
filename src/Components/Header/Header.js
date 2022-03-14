@@ -13,38 +13,51 @@ const Header = () => {
         navigate("/login");
     }
     return (
-        <div className='header-container'>
-            <div className="header">
-            {/* logo goes here  */}
-            <div className="logo-section">
-                <NavLink to="/home" className="text-doco">
-                <h2>YouHeal</h2>
-                </NavLink>
-            </div>
-            {/* nav section goes here  */}
-            <nav className="nav-section">
-                <ul>
-                    <li>
-                        <NavLink className={()=>"link"} to="/about">About</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className={()=>"link"} to="/">Doctors</NavLink>
-                    </li>
-                    <li>
-                        <NavLink className={()=>"link"} to="/ambulance">Ambulance</NavLink>
-                    </li>
-                    {!user?.email&&<li>
-                        <NavLink className={()=>"link"} to="/login">Login</NavLink>
-                    </li>}
-                    {!user?.email&&<li>
-                        <NavLink className={()=>"signup"} to="/register">SignUp</NavLink>
-                    </li>}
-                    
-                    {user?.email && <li><span style={{marginLeft:"5px", marginRight:"5px", color:"white"}}>{user.displayName}</span></li>}
+        <div>
+
+            {/* start here ------------------------ */}
+
+            <nav className="navbar navbar-expand-lg navbar-dark bg-primary">
+  <div className="container-fluid">
+    <NavLink to="/" className="navbar-brand">YOUHEAL</NavLink>
+
+
+    {/* toggle button  */}
+    <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span className="navbar-toggler-icon"></span>
+    </button>
+
+    
+    <div className="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
+        <li className="nav-item">
+          <NavLink to="/about" className="nav-link active">About</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/" className="nav-link">Doctors</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/ambulance" className="nav-link">Ambulance</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/contact" className="nav-link">Contact</NavLink>
+        </li>
+        {!user?.email&&<li className="nav-item">
+          <NavLink to="/login" className="nav-link">Login</NavLink>
+        </li>}
+        {!user?.email && <li className="nav-item">
+          <NavLink to="/register" className="nav-link">Register</NavLink>
+        </li>}
+        {user?.email && <li className="nav-item"><span style={{margin:"5px",color:"white",}}>{user.displayName}</span></li>}
                     {user?.email && <li className="logout" onClick={handleLogOut}>Logout</li>}
-                </ul>
-            </nav>
-        </div>
+      </ul>
+
+    </div>
+  </div>
+</nav>
+
+            {/* end here ------------------------------ */}
+            
         </div>
     );
 };

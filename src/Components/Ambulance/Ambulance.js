@@ -23,6 +23,7 @@ const Ambulance = () => {
             </div>
 
             <div className="ambulance-last">
+                <h2 className="ambulance-h2">Ambulance</h2>
         <div className="my-main">
             {/* <MainNav></MainNav> */}
             <div className="row gx-0">

@@ -23,7 +23,7 @@
 }
 
 .my-card{
-    /* width: 25%; */
+    width: 20rem;
     margin: 10px;
     display: flex;
     flex-direction: column;
@@ -32,6 +32,7 @@
     padding: 5px;
     box-shadow: 5px 5px 5px rgba(223, 219, 219, 0.89);
     border-radius: 5px;
+    /* border: 2px solid red; */
 }
 
 .title{
@@ -65,6 +66,34 @@
     border-radius: 5px;
     color: rgba(134, 130, 130, 0.808);
     margin-right: 5px;
+}
+
+@media only screen and (max-width: 412px){
+    .main-nav{
+        /* display: none; */
+        /* margin: 5px; */
+    }
+
+    .my-card{
+        /* border: 2px solid yellow; */
+        /* width: 50%; */
+        /* padding: 0px; */
+        /* width: 100%; */
+        /* align-items: center; */
+    }
+
+    .avail{
+        /* border: 2px solid tomato; */
+        /* width: 100%; */
+        display: none;
+    }
+    .row{
+        width: 100%;
+    }
+
+    .title{
+        /* font-size: 10px; */
+    }
 }
 
 

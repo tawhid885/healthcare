@@ -16,6 +16,7 @@ import Cardiology from './Components/Cardiology/Cardiology';
 import Gynocology from './Components/Gynocology/Gynocology';
 import Conology from "./Components/Conology/Conology";
 import Ambulance from './Components/Ambulance/Ambulance';
+import Contact from './Components/Contact/Contact';
 
 
 
@@ -38,6 +39,7 @@ function App() {
           <Route path="/ambulance" element={<Ambulance></Ambulance>}/>
           <Route path="/login" element={<Login></Login>}/>
           <Route path="/register" element={<Register></Register>} />
+          <Route path="/contact" element={<Contact></Contact>}/>
           <Route path="*" element={<Error></Error>}/>
         </Routes>
         <Footer></Footer>

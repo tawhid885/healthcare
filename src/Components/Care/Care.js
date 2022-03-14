@@ -8,8 +8,8 @@ const Care = () => {
     return (
         <div className="care-container">
             <h1 style={{color: "blue"}}>Care when you need it, where you need it.</h1>
-            <div className="care">
-            <div className="care-item">
+            <div className="row">
+            <div className="care-item col-lg-4 col-sm-12 col-md-12">
                 <div className="care-image">
                     <img src={care1} alt="" />
                 </div>
@@ -22,7 +22,7 @@ const Care = () => {
                     </div>
                     <button className="btn care-btn">Covid 19 Vaccine Updates</button>
             </div>
-            <div className="care-item">
+            <div className="care-item col-lg-4 col-sm-12 col-md-12">
                 <div className="care-image">
                     <img src={care2} alt="" />
                 </div>
@@ -35,7 +35,7 @@ const Care = () => {
                     </div>
                     <button className="btn care-btn">Schedule Online</button>
             </div>
-            <div className="care-item">
+            <div className="care-item col-lg-4 col-sm-12 col-md-12">
                 <div className="care-image">
                     <img src={care3} alt="" />
                 </div>

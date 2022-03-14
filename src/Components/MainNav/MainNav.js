@@ -5,28 +5,9 @@ import "./MainNav.css";
 const MainNav = () => {
     const location= useLocation();
     const {pathname} = location;
-    const navigate = useNavigate();
 
     const splitPathname = pathname.split("/");
-    console.log(splitPathname);
-
-    const handleAbout=()=>{
-        console.log("trigerred details");
-        navigate("/about");
-    }   
-
-    // const handleHome=()=>{
-    //     console.log("home trigerred")
-    //     navigate("/home");
-    // }
-
-    // handleDermetology =()=>{
-    //     navi
-    // }
-
-   
-
-    // console.log()
+ 
     return (
         <div className="main-nav">
                 <div>

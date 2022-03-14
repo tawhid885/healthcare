@@ -8,8 +8,8 @@ const Choose = () => {
     return (
         <div className="choose-container">
             <h1 className='choose-color'>Our Stories</h1>
-            <div className='choose'>
-            <div className="choose-item">
+            <div className='row'>
+            <div className="choose-item col-lg-4 col-sm-12 col-md-12">
                 <h5 className="choose-color">Brain Health and Conditions</h5>
                 <div className="image-section">
                     <img src={c1} alt="" className="choose-image"/>
@@ -19,7 +19,7 @@ const Choose = () => {
                     <p>Latest treatment options make it possible to maintain an active</p>
                 </div>
             </div>
-            <div className="choose-item">
+            <div className="choose-item col-lg-4 col-sm-12 col-md-12">
                 <h5 className="choose-color">HEART HEALTH</h5>
                 <div className="image-section">
                     <img src={c2} alt="" className="choose-image"/>
@@ -29,7 +29,7 @@ const Choose = () => {
                     <p>When Connor had a stroke at age 30, RUSH cardiology helped him</p>
                 </div>
             </div>
-            <div className="choose-item">
+            <div className="choose-item col-lg-4 col-sm-12 col-md-12">
                 <h5 className="choose-color">HEART HEALTH</h5>
                 <div className="image-section">
                     <img src={c3} alt="" className="choose-image"/>

@@ -1,24 +1,19 @@
 .about{
     margin-top: 40px;
-    /* padding: 40px; */
 }
 
 .about h1{
     padding: 20px;
     color: #896436;
     font-weight: bolder;
-    border-bottom: 5px solid #896436;
+    border-bottom: 4px solid #896436;
 }
 
-.about-container{
-    display: flex;
-    justify-content: space-between;
+
+@media only screen and (max-width: 412px){
+
+    .row{
+        width: 100%;
+    }
 }
 
-.we-com{
-    width: 65%;
-}
-
-.glance-com{
-    width: 35%;
-}

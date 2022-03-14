@@ -49,9 +49,6 @@ const useFirebase=()=>{
         updateProfile(auth.currentUser, {
             displayName: name
           }).then(() => {
-            // setName("");
-            // setEmail("");
-            // setPassword("");
             setUser({});
             setError("");
             
@@ -63,7 +60,6 @@ const useFirebase=()=>{
     const logOut=()=>{
         signOut(auth)
         .then(()=>{
-            console.log("signout successfully");
             setUser({});
             localStorage.removeItem("user");
         })

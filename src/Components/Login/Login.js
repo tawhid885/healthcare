@@ -17,7 +17,6 @@ const Login = () => {
     const redirect_uri = location.state?.from || "/home";
 
     const onSubmit = ({email, password}) => {
-        console.log(email, password);
         setEmail(email);
         setPassword(password);
         signInWithEmail()
@@ -29,7 +28,6 @@ const Login = () => {
             localStorage.setItem('user',JSON.stringify(info));
 
             setUser(user);
-            console.log("user successfully logged in! , ", result.user);
             setError("");
             reset();
             navigate(redirect_uri);

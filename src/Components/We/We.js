@@ -11,35 +11,35 @@ const We = () => {
     return (
         <div className="we">
             <div className="video-section">
-                <iframe width="560" className="w-video" height="315" src="https://www.youtube.com/embed/ZH93ufLvYF8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" className="w-video" height="315" src="https://www.youtube.com/embed/ZH93ufLvYF8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                 <p>Learn about our mission, our people, the patients who partner with us, and what drives us to improve health and fight disease. This is our story.</p>
             </div>
             <div className="we-main">
-                <div className="row">
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                <div className="row gx-0">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w1} alt="" />
                             </div>
                             <div className="w-detail">
                             <h2>Who We Are</h2>
-                            <p>The NIH Director, organization, and staff directory.</p>
+                            <p>The YouHeal Director, organization, and staff directory.</p>
                         </div>
                         </div>
                         
                     </div>
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w2} alt="" /></div>
                                 <div className="w-detail">
                             <h2>What do We do</h2>
-                            <p>How NIH works to prevent disease and improve health.</p>
+                            <p>How YouHeal works to prevent disease and improve health.</p>
                         </div>
                         </div>
                         
                     </div>
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w3} alt="" />
@@ -51,7 +51,7 @@ const We = () => {
                         </div>
                         
                     </div>
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w4} alt="" />
@@ -63,19 +63,19 @@ const We = () => {
                             </div>
                             
                         </div>
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w5} alt="" />
                             </div>
                             <div className="w-detail">
                             <h2>Frequently Asked Questions</h2>
-                            <p>Answers to frequently asked questions about the NIH.</p>
+                            <p>Answers to frequently asked questions about the YouHeal.</p>
                         </div>
                         </div>
                         
                     </div>
-                    <div className="col-lg-6 col-sm-6 col-md-12">
+                    <div className="col-lg-6 col-sm-12 col-md-12">
                         <div className="we-info">
                             <div className="w-info-image">
                                 <img src={w6} alt="" />

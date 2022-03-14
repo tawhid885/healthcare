@@ -1,0 +1,39 @@
+.ex-link{
+    /* border: 2px solid red; */
+    color: black;
+    display:flex;
+    flex-direction: column;
+}
+
+.contact{
+    margin-top: 40px;
+    padding: 20px;
+}
+
+.ex-link li{
+    list-style-type: disc;
+}
+
+.ex-link a{
+    color: blue;
+}
+
+.side-link{
+    margin:0px;
+    padding: 0px;
+    display:flex;
+    flex-direction: column;
+    /* align-items: flex-start; */
+}
+
+.side-link li{
+    margin: 0px;
+    padding: 0px;
+    margin-top: 5px;
+}
+
+.side-link li a{
+    color: blue;
+    /* margin:0px;
+    padding: 0px; */
+}

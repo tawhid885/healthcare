@@ -3,8 +3,8 @@ import "./Error.css";
 
 const Error = () => {
     return (
-        <div>
-            <h2>this is error page</h2>
+        <div className="error-page">
+            <h2>Page not Fount</h2>
         </div>
     );
 };
