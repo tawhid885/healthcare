@@ -1,0 +1,45 @@
+/* home css goes here  */
+.s-menu-f{
+    background-color: rgba(0, 0, 255, 0.075);
+    margin: 15px;
+    color: rgba(0, 0, 255, 0.795);
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    /* justify-content: flex-start; */
+    align-items: center;
+    cursor: pointer;
+}
+
+.s-menu-f div{
+    margin-left: 12px;
+}
+
+.s-menu-f div a{
+    text-decoration: none;
+}
+
+.s-menu{
+    background-color: rgba(250, 250, 250, 0.877);
+    margin: 15px;
+    padding: 8px;
+    font-weight: bold;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.s-menu div{
+    margin-left: 12px;
+}
+
+.s-menu div a{
+    text-decoration: none;
+    color: rgb(126, 123, 123);
+}
+
+.active{
+    background-color: rgba(0, 0, 255, 0.075); 
+}

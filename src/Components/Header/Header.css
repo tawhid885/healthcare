@@ -1,0 +1,77 @@
+/* header css  */
+.header-container{
+    padding-left: 50px;
+    padding-right: 50px;
+     background-color: blue;
+}
+
+
+.header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-section{
+    /* margin-left: 15px; */
+    /* width: 30%; */
+    /* background-color: white; */
+}
+
+.logo-section .text-deco{
+    text-decoration: none;
+}
+
+.logo-section h2{
+    color: white;
+    background-color: blue;
+}
+
+.logo-img{
+    width: 150px;
+    height: 100px;
+}
+
+ul{
+    display: flex;
+    justify-content: space-between;
+    font-weight: bolder;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 10px;
+    margin-left: 25px;
+    cursor: pointer;
+}
+
+ul li .cart-icon{
+    cursor: pointer;
+}
+
+ul li a{
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    color: white;
+}
+
+ul li a.signup{
+    /* background-color: blue; */
+    padding: 6px;
+    border-radius: 8px;
+    color: white;
+    border: none;
+}
+
+ul li a.signup:hover{
+    color: white;
+}
+
+.logout{
+    color: white;
+}
+
+.logout:hover{
+    color: white;
+}

@@ -1,0 +1,10 @@
+.conology{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.conology-last{
+    width: 77%;
+    padding: 20px;
+}

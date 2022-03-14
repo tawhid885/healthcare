@@ -1,0 +1,10 @@
+.cardiology{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.cardiology-last{
+    width: 77%;
+    padding: 20px;
+}

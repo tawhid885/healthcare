@@ -1,0 +1,18 @@
+.glance-section{
+    margin-top: 20px;
+    padding: 20px;
+    padding-top: 0px;
+}
+
+.g-full{
+    margin-top: 10px;
+    width: 70%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.g-detail{
+    color: blue;
+    margin-left:10px;
+}

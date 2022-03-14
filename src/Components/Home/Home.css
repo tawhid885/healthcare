@@ -1,0 +1,16 @@
+.home{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.sidebar{
+    width: 23%;
+    padding: 20px;
+}
+
+.main{
+    width: 77%;
+    padding: 20px;
+    /* border: 2px solid blue; */
+}

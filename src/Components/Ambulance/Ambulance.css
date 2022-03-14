@@ -1,0 +1,10 @@
+.ambulance{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.ambulance-last{
+    width: 77%;
+    padding: 20px;
+}

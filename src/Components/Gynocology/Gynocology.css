@@ -1,0 +1,10 @@
+.gynocology{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+}
+
+.gynocology-last{
+    width: 77%;
+    padding: 20px;
+}

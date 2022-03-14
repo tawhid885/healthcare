@@ -1,0 +1,43 @@
+.banner-container{
+    padding: 50px;
+}
+
+.banner{
+    background-image: url("./../../img/banner2.jpg");
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* padding: 50px; */
+}
+
+.banner-info{
+    display: flex;
+    justify-content: center;
+    color: blue;
+    font-weight: bold;
+}
+
+.banner-search{
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+    font-weight: bolder;
+}
+
+.banner-input{
+    width: 55%;
+    border: none;
+    border-radius: 35px;
+    outline: none;
+    padding: 10px;
+}
+
+.my-banner-btn{
+    color: white;
+    background-color: blue;
+    border-radius: 35px;
+    cursor: pointer;
+    padding: 10px;
+}

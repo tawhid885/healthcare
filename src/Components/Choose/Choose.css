@@ -1,0 +1,27 @@
+.choose-container{
+    padding: 15px;
+}
+.choose{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* padding: 15px; */
+}
+
+.choose-item{
+    width: 33%;
+    padding: 10px;
+}
+
+.choose-image{
+    height: 250px;
+    width: 100%;
+}
+
+.choose-color{
+    color: blue;
+}
+
+.choose-item h5{
+    margin-top: 15px;
+}

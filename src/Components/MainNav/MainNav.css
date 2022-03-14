@@ -1,0 +1,59 @@
+.doctors{
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+.main-ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+.main-ul li{
+    
+    /* text-align: center; */
+    /* border: 2px solid red; */
+}
+
+.main-ul li{
+    cursor: pointer;
+}
+
+
+.activated{
+    /* color: red; */
+    margin: 0px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: blue;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 12px;
+}
+
+
+.n-active{
+    /* color: green; */
+    margin: 0px;
+    cursor: pointer;
+    padding: 5px;
+    background-color: rgba(99, 98, 98, 0.219);
+    padding-left: 25px;
+    padding-right: 25px;
+    border-radius: 12px;
+}
+
+a{
+    text-decoration: none;
+    color: rgba(104, 101, 101, 0.534);
+}
+
+a:hover{
+    color:rgba(99, 98, 98, 0.795);
+}
+
+.white-color{
+    color: white;
+}
+
