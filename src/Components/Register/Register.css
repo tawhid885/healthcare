@@ -59,7 +59,7 @@
     cursor: pointer;
 }
 
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 688px){
     .form-field, .my-btn, .form-container{
         width: 100%;
     }

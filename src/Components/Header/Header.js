@@ -6,11 +6,14 @@ import useAuth from "./../../Hooks/useAuth";
 
 const Header = () => {
     const navigate = useNavigate();
-    const {user, logOut} = useAuth();
+    const {user, setUser, logOut} = useAuth();
     const handleLogOut=()=>{
-        logOut();
-        localStorage.clear();
-        navigate("/login");
+        logOut()
+        .then(()=>{
+          setUser({});
+          localStorage.removeItem("user");
+          navigate("/login");
+      })
     }
     return (
         <div>
@@ -29,12 +32,12 @@ const Header = () => {
 
     
     <div className="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-        <li className="nav-item">
-          <NavLink to="/about" className="nav-link active">About</NavLink>
-        </li>
+      <ul className="navbar-nav ms-auto mb-2 mb-lg-0">  
         <li className="nav-item">
           <NavLink to="/" className="nav-link">Doctors</NavLink>
+        </li>
+        <li className="nav-item">
+          <NavLink to="/about" className="nav-link">About</NavLink>
         </li>
         <li className="nav-item">
           <NavLink to="/ambulance" className="nav-link">Ambulance</NavLink>

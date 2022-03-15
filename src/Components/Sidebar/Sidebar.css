@@ -1,4 +1,3 @@
-/* home css goes here  */
 .s-menu-f{
     background-color: rgba(0, 0, 255, 0.075);
     margin: 15px;
@@ -7,7 +6,6 @@
     font-weight: bold;
     border-radius: 5px;
     display: flex;
-    /* justify-content: flex-start; */
     align-items: center;
     cursor: pointer;
 }
@@ -38,8 +36,4 @@
 .s-menu div a{
     text-decoration: none;
     color: rgb(126, 123, 123);
-}
-
-.active{
-    /* background-color: rgba(0, 0, 255, 0.075);  */
 }

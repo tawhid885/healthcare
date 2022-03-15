@@ -11,7 +11,7 @@ const We = () => {
     return (
         <div className="we">
             <div className="video-section">
-                <iframe width="560" className="w-video" height="315" src="https://www.youtube.com/embed/ZH93ufLvYF8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <iframe width="560" className="w-video" height="315" src="https://www.youtube.com/embed/ZH93ufLvYF8" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowFullScreen></iframe>
                 <p>Learn about our mission, our people, the patients who partner with us, and what drives us to improve health and fight disease. This is our story.</p>
             </div>
             <div className="we-main">

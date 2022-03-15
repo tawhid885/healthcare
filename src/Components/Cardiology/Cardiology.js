@@ -5,8 +5,10 @@ import Sidebar from '../Sidebar/Sidebar';
 import "./Cardiology.css";
 import Care from "./../Care/Care";
 import Choose from "./../Choose/Choose";
+import { useNavigate } from 'react-router-dom';
 
 const Cardiology = () => {
+    const navigate = useNavigate();
     const [doctors, setDoctors] = useState([]);
     useEffect(()=>{
         const url = `./cardiology.json`;
@@ -14,6 +16,12 @@ const Cardiology = () => {
         .then(res=> res.json())
         .then(data => setDoctors(data))
     },[]);
+
+    
+    const handleDetail =(id)=>{
+        const url = `/details/${id}`;
+        navigate(url);
+    }
     return (
         <div>
             <Banner></Banner>
@@ -30,7 +38,7 @@ const Cardiology = () => {
                 doctors.map(doctor =>{
                     const {key, name, address, type, image} = doctor;
                     return (
-                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        <div key={key} className="col-lg-4 col-md-6 col-sm-12">
                             <div className="my-card" style={{width: "20rem"}}>
   <div className="img-container">
   <img src={image} class="" alt="doctor"/>
@@ -40,7 +48,7 @@ const Cardiology = () => {
     <h4 href="#" class="type">{type}</h4>
     <div className="last-section">
         <p className='avail'>Availability</p>
-        <p className="call"><span style={{marginRight:"4px"}}><i className="fas fa-phone-alt"></i></span>Make a phone call</p>
+        <p className="call" onClick={()=>handleDetail(key)}><span style={{marginRight:"4px"}}><i className="fas fa-phone-alt"></i></span>Make a phone call</p>
     </div>
 </div>
                         </div>

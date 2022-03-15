@@ -27,14 +27,7 @@ const useFirebase=()=>{
     },[]);
 
     const signInWithGoogle=()=>{
-        signInWithPopup(auth, googleProvider)
-        .then(result =>{
-            const user = result.user;
-            console.log("user is from google, ",user )
-        })
-        .catch(error=>{
-            setError(error.message);
-        })
+        return signInWithPopup(auth, googleProvider)
     }
 
     const signInWithEmail=()=>{
@@ -46,23 +39,13 @@ const useFirebase=()=>{
     }
 
     const updateProfileInfo=()=>{
-        updateProfile(auth.currentUser, {
+        return updateProfile(auth.currentUser, {
             displayName: name
-          }).then(() => {
-            setUser({});
-            setError("");
-            
-          }).catch((error) => {
-            setError(error.message);
-          });
+          })
     }
 
     const logOut=()=>{
-        signOut(auth)
-        .then(()=>{
-            setUser({});
-            localStorage.removeItem("user");
-        })
+        return signOut(auth)
     }
 
     return {

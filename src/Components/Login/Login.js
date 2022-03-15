@@ -1,7 +1,6 @@
 import React from 'react';
 import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 import "./Login.css";
-import { useForm } from 'react-hook-form';
 import useAuth from "./../../Hooks/useAuth";
 import logo from "./../../img/logo2.jpg";
 
@@ -10,15 +9,33 @@ import logo from "./../../img/logo2.jpg";
 const Login = () => {
     const navigate = useNavigate();
 
+    const {setUser, setEmail, setPassword, error, setError, signInWithEmail, signInWithGoogle} = useAuth();
 
-    const {setUser, setEmail, setPassword, setError, signInWithEmail} = useAuth();
-    const { register, handleSubmit, reset, formState: { errors } } = useForm();
+
     const location = useLocation();
     const redirect_uri = location.state?.from || "/home";
 
-    const onSubmit = ({email, password}) => {
-        setEmail(email);
-        setPassword(password);
+    const handleGoogleSignIn=()=>{
+        signInWithGoogle()
+        .then(result =>{
+            navigate(redirect_uri);
+            setError("");
+        })
+        .catch(error=>{
+            setError(error.message);
+        })
+    }
+
+    const handleEmail=(e)=>{
+        setEmail(e.target.value);
+    }
+
+    const handlePassword=(e)=>{
+        setPassword(e.target.value);
+    }
+
+    const onSubmit = (e) => {
+        e.preventDefault();
         signInWithEmail()
         .then(result=>{
             const user = result.user;
@@ -29,7 +46,6 @@ const Login = () => {
 
             setUser(user);
             setError("");
-            reset();
             navigate(redirect_uri);
         })
         .catch(error=>{
@@ -44,20 +60,18 @@ const Login = () => {
                     <img src={logo} alt="logo" />
                 </div>
                 <div className="field-container">
-                    <form className="my-form" onSubmit={handleSubmit(onSubmit)}>
+                    <form className="my-form" onSubmit={onSubmit}>
 
-                        <input className="form-field" 
-                        type="email" placeholder='Email'{...register("email", { required: true })} />
+                        <input type="email" className='form-field' placeholder='Email' onBlur={handleEmail} />
 
-                        <input className="form-field" 
-                        type="password" placeholder='Password' {...register("password", { required: true })} />
+                        <input type="password" className='form-field' placeholder='Password' onBlur={handlePassword}/>
     
-                        {(errors.email || errors.password) && <span className='error-class'>This field is required</span>}
-
+                        <p style={{color:"red"}}>{error}</p>
                         <input type="submit" value="Login" className='btn my-btn' />
                     </form>
                     <br />
                     <p>Don't have an account? <NavLink to="/register" className={()=>"pointer"}>Signup</NavLink></p>
+                    <p style={{cursor:"pointer"}} onClick={handleGoogleSignIn}>Sign In with Google</p>
                 </div>
             </div>
         </div>

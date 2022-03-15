@@ -1,14 +1,12 @@
 import React from 'react';
 import "./Footer.css";
-// import footer_img from "../../img/logo2.png";
 
 const Footer = () => {
     return (
         <div className='footer'>
             <div className='first-part'>
                 <div className="footer-img">
-                    {/* <img src={footer_img} alt="" /> */}
-                    <h2>logo</h2>
+                    <h2>YouHeal</h2>
                 </div>
                 <div className='main-li-container'>
                     <div>

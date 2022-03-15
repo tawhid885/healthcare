@@ -1,5 +1,4 @@
 .ex-link{
-    /* border: 2px solid red; */
     color: black;
     display:flex;
     flex-direction: column;
@@ -23,7 +22,6 @@
     padding: 0px;
     display:flex;
     flex-direction: column;
-    /* align-items: flex-start; */
 }
 
 .side-link li{
@@ -34,6 +32,4 @@
 
 .side-link li a{
     color: blue;
-    /* margin:0px;
-    padding: 0px; */
 }

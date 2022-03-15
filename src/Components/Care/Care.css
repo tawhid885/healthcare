@@ -17,8 +17,6 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    /* width: 30%; */
-    /* border: 2px solid red; */
     height: 400px;
 }
 
@@ -31,13 +29,10 @@
 .care-detail{
     display: flex;
     flex-direction: column;
-    /* justify-content: space-between; */
-    /* border: 2px solid blue; */
     align-items: center;
 }
 
 .care-detail p{
-    /* line-height: 15px; */
     color: #4A494E;
     font-size: 1.125rem;
     font-weight: 400;

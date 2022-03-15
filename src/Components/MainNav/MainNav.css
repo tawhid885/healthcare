@@ -9,20 +9,12 @@
     padding: 0px;
 }
 
-
-.main-ul li{
-    
-    /* text-align: center; */
-    /* border: 2px solid red; */
-}
-
 .main-ul li{
     cursor: pointer;
 }
 
 
 .activated{
-    /* color: red; */
     margin: 0px;
     cursor: pointer;
     padding: 5px;
@@ -35,7 +27,6 @@
 
 
 .n-active{
-    /* color: green; */
     margin: 0px;
     cursor: pointer;
     padding: 5px;
@@ -58,14 +49,12 @@ a:hover{
     color: white;
 }
 
-@media only screen and (max-width: 412px){
+@media only screen and (max-width: 688px){
     .main-ul{
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        /* width: 100%; */
-        /* border: 2px solid red; */
     }
 
     .main-ul li{
@@ -75,4 +64,6 @@ a:hover{
         justify-content: center;
     }
 }
+
+
 

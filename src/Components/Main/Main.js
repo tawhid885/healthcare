@@ -30,7 +30,7 @@ const Main = () => {
                 doctors.map(doctor =>{
                     const {key, name, address, type, image} = doctor;
                     return (
-                        <div className="col-lg-4 col-md-12 col-sm-12">
+                        <div key={key} className="col-lg-4 col-md-12 col-sm-12">
                             <div className="my-card" >
   <div className="img-container">
   <img src={image} class="" alt="doctor"/>

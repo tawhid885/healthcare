@@ -2,7 +2,6 @@
     display: flex;
     justify-content: space-between;
     margin-top: 10px;
-    /* border: 2px solid blue; */
     padding: 50px;
 }
 
@@ -18,7 +17,6 @@
 .menu-image-container{
     display: flex;
     justify-content: center;
-    /* border: 2px solid red; */
     width: 40%;
 }
 
@@ -30,7 +28,6 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* border: 2px solid blue; */
 }
 
 

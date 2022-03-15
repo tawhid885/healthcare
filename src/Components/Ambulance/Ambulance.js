@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import Banner from '../Banner/Banner';
 import Care from '../Care/Care';
 import Choose from '../Choose/Choose';
-import MainNav from '../MainNav/MainNav';
 import Sidebar from '../Sidebar/Sidebar';
 import "./Ambulance.css";
 
@@ -25,13 +24,12 @@ const Ambulance = () => {
             <div className="ambulance-last">
                 <h2 className="ambulance-h2">Ambulance</h2>
         <div className="my-main">
-            {/* <MainNav></MainNav> */}
             <div className="row gx-0">
             {
                 ambulance.map(amb =>{
                     const {key, country, charge, mobile, image} = amb;
                     return (
-                        <div className="col-lg-4 col-md-6 col-sm-12">
+                        <div key={key} className="col-lg-4 col-md-6 col-sm-12">
                             <div className="my-card" style={{width: "20rem"}}>
   <div className="img-container">
   <img src={image} class="" alt="doctor"/>

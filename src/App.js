@@ -17,6 +17,7 @@ import Gynocology from './Components/Gynocology/Gynocology';
 import Conology from "./Components/Conology/Conology";
 import Ambulance from './Components/Ambulance/Ambulance';
 import Contact from './Components/Contact/Contact';
+import LoginPrivate from './Components/LoginPrivate/LoginPrivate';
 
 
 
@@ -37,8 +38,8 @@ function App() {
           <Route path="/gynocology" element={<Gynocology></Gynocology>}/>
           <Route path="/conology" element={<Conology></Conology>}/>
           <Route path="/ambulance" element={<Ambulance></Ambulance>}/>
-          <Route path="/login" element={<Login></Login>}/>
-          <Route path="/register" element={<Register></Register>} />
+          <Route path="/login" element={<LoginPrivate><Login></Login></LoginPrivate>}/>
+          <Route path="/register" element={<LoginPrivate><Register></Register></LoginPrivate>} />
           <Route path="/contact" element={<Contact></Contact>}/>
           <Route path="*" element={<Error></Error>}/>
         </Routes>

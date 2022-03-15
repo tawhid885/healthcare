@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import "./Register.css";
 import logo from "./../../img/logo2.jpg";
-import {NavLink, useNavigate} from "react-router-dom";
+import {NavLink, useLocation, useNavigate} from "react-router-dom";
 import useAuth from "./../../Hooks/useAuth";
 
 
@@ -9,9 +9,12 @@ import useAuth from "./../../Hooks/useAuth";
 const Register = () => {
     const [cp, setCP] = useState("");
     const navigate = useNavigate();
+    const location = useLocation();
+
+    const redirect_uri = location.state?.from || "/home";
 
 
-    const {password, setName, setEmail, setPassword, error, setError, createNewUser, updateProfileInfo} = useAuth();
+    const {password, setUser, setName, setEmail, setPassword, error, setError, createNewUser, updateProfileInfo, signInWithGoogle} = useAuth();
 
     const handleName=(e)=>{
         setName(e.target.value);
@@ -29,10 +32,21 @@ const Register = () => {
         setCP(e.target.value);
     }
 
+    const handleGoogleSignIn=()=>{
+        signInWithGoogle()
+        .then(result =>{
+            const user = result.user;
+            console.log("user is from google, ",user )
+            navigate(redirect_uri);
+        })
+        .catch(error=>{
+            setError(error.message);
+        })
+    }
+
 
     const onSubmit = (e) => {
         e.preventDefault();
-        console.log("triggered!");
         if(password !== cp){
             setError("password must be same");
             return;
@@ -40,12 +54,17 @@ const Register = () => {
         else{
             createNewUser()
             .then(result=>{
-                console.log("user created, ", result.user);
-                updateProfileInfo();
-                navigate("/login");
+                updateProfileInfo()
+                .then(() => {
+                    setUser({});
+                    setError("");
+                    navigate("/login");
+                    
+                  }).catch((error) => {
+                    setError(error.message);
+                  });
             })
             .catch(error=>{
-                console.log(error.message);
                 setError(error.message);
             })
         }
@@ -76,6 +95,7 @@ const Register = () => {
                     </form>
                     <br />
                     <p>Already have an account? <NavLink to="/login" className={()=>"pointer"}>Login</NavLink></p>
+                    <p style={{cursor:"pointer"}} onClick={handleGoogleSignIn}>Sign In with Google</p>
                 </div>
             </div>
         </div>

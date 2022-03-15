@@ -3,7 +3,6 @@
 }
 
 .my-main{
-    /* border: 2px solid red; */
     padding: 8px;
 }
 
@@ -12,14 +11,12 @@
 }
 
 .img-container img{
-    /* width: 40px; */
     width: 150px;
     height: 150px;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* padding: 5px; */
 }
 
 .my-card{
@@ -32,7 +29,6 @@
     padding: 5px;
     box-shadow: 5px 5px 5px rgba(223, 219, 219, 0.89);
     border-radius: 5px;
-    /* border: 2px solid red; */
 }
 
 .title{
@@ -68,31 +64,12 @@
     margin-right: 5px;
 }
 
-@media only screen and (max-width: 412px){
-    .main-nav{
-        /* display: none; */
-        /* margin: 5px; */
-    }
-
-    .my-card{
-        /* border: 2px solid yellow; */
-        /* width: 50%; */
-        /* padding: 0px; */
-        /* width: 100%; */
-        /* align-items: center; */
-    }
-
+@media only screen and (max-width: 688px){
     .avail{
-        /* border: 2px solid tomato; */
-        /* width: 100%; */
         display: none;
     }
     .row{
         width: 100%;
-    }
-
-    .title{
-        /* font-size: 10px; */
     }
 }
 
