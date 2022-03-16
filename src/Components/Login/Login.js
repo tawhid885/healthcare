@@ -18,8 +18,8 @@ const Login = () => {
     const handleGoogleSignIn=()=>{
         signInWithGoogle()
         .then(result =>{
-            navigate(redirect_uri);
             setError("");
+            navigate(redirect_uri);
         })
         .catch(error=>{
             setError(error.message);

@@ -35,8 +35,6 @@ const Register = () => {
     const handleGoogleSignIn=()=>{
         signInWithGoogle()
         .then(result =>{
-            const user = result.user;
-            console.log("user is from google, ",user )
             navigate(redirect_uri);
         })
         .catch(error=>{
