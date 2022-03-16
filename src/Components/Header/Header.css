@@ -1,8 +1,12 @@
 /* header css  */
 .header-container{
-    padding-left: 50px;
+    /* padding-left: 50px;
     padding-right: 50px;
-    background-color: blue;
+    background-color: blue; */
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 2;
 }
 
 
